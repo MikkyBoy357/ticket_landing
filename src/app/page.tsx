@@ -15,6 +15,8 @@ import {
   Camera,
   MapPin,
 } from "lucide-react"
+import Link from "next/link"
+
 
 export default function Home() {
   return (
@@ -34,10 +36,15 @@ export default function Home() {
             TicketFlow
           </span>
         </div>
-        <button className="group relative px-8 py-3 bg-gradient-to-r from-violet-500 to-purple-600 text-white rounded-full font-bold hover:shadow-2xl hover:shadow-purple-500/25 transition-all duration-300 hover:scale-105">
-          <span className="relative z-10">Get Started</span>
-          <div className="absolute inset-0 bg-gradient-to-r from-pink-500 to-violet-500 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-        </button>
+        <div className="flex items-center gap-4">
+          <Link href="/host" className="text-gray-600 hover:text-violet-600 font-medium transition-colors">
+            For Event Hosts
+          </Link>
+          <button className="group relative px-8 py-3 bg-gradient-to-r from-violet-500 to-purple-600 text-white rounded-full font-bold hover:shadow-2xl hover:shadow-purple-500/25 transition-all duration-300 hover:scale-105">
+            <span className="relative z-10">Get Started</span>
+            <div className="absolute inset-0 bg-gradient-to-r from-pink-500 to-violet-500 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+          </button>
+        </div>
       </nav>
 
       {/* Hero Section */}
@@ -381,6 +388,9 @@ export default function Home() {
               want to go out.
             </p>
             <div className="flex items-center gap-6 text-gray-500">
+              <Link href="/host" className="hover:text-violet-400 transition-colors">
+                For Event Hosts
+              </Link>
               <span>Privacy</span>
               <span>Terms</span>
               <span>Support</span>
